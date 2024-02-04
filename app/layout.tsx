@@ -8,7 +8,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Authy",
+  title: {
+    default: "Authy",
+    template: "%s - Authy",
+  },
   description:
     "Authy is a next-generation authentication app that provides secure and easy login, password recovery, email verification, and two-factor verification for web applications. Authy integrates with Next-auth v5, Next.js 14, and OAuth providers such as Google and GitHub. Authy also supports user roles, role gates, and protected API routes and server actions. Try Authy today and experience the best authentication solution for your web app.enerated by create next app",
   verification: {
