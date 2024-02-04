@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useSearchParams } from "next/navigation";
-import { useState, useTransition } from "react";
+import { useState, useTransition, Suspense } from "react";
 import { LoginSchema } from "@/schemas";
 import { CardWrapper } from "@/components/auth/card-wrapper";
 import { Input } from "@/components/ui/input";
@@ -42,12 +42,12 @@ export const LoginForm = () => {
     startTransition(() => {
       login(values).then((data) => {
         setError(data?.error);
-        //@ts-ignore
-        setSuccess(data.success);
+        setSuccess(data?.success);
       });
     });
   };
   return (
+    <Suspense>
     <CardWrapper
       headerLabel="Welcome back"
       backButtonLabel="Don't have an account?"
@@ -102,5 +102,6 @@ export const LoginForm = () => {
         </form>
       </Form>
     </CardWrapper>
+    </Suspense>
   );
 };
