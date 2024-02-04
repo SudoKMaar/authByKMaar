@@ -47,7 +47,7 @@ export const LoginForm = () => {
     });
   };
   return (
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
     <CardWrapper
       headerLabel="Welcome back"
       backButtonLabel="Don't have an account?"
