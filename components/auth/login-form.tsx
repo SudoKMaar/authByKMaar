@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useSearchParams } from "next/navigation";
-import { useState, useTransition } from "react";
+import { Suspense, useState, useTransition } from "react";
 import { LoginSchema } from "@/schemas";
 import { CardWrapper } from "@/components/auth/card-wrapper";
 import { Input } from "@/components/ui/input";
@@ -95,7 +95,9 @@ export const LoginForm = () => {
               )}
             />
           </div>
-          <FormError message={error || urlError} />
+          <Suspense>
+            <FormError message={error || urlError} />
+          </Suspense>
           <FormSuccess message={success} />
           <Button type="submit" className="w-full">
             Login
