@@ -9,16 +9,17 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Authy",
-    template: "%s - Authy",
+    default: "Auth by KMaar",
+    template: "%s - Auth by KMaar",
   },
   description:
-    "Authy is a next-generation authentication app that provides secure and easy login, password recovery, email verification, and two-factor verification for web applications. Authy integrates with Next-auth v5, Next.js 14, and OAuth providers such as Google and GitHub. Authy also supports user roles, role gates, and protected API routes and server actions. Try Authy today and experience the best authentication solution for your web app.enerated by create next app",
+    "Auth by KMaar is a next-generation authentication app that provides secure and easy login, password recovery, email verification, and two-factor verification for web applications. Auth by KMaar integrates with Next-auth v5, Next.js 14, and OAuth providers such as Google and GitHub. Auth by KMaar also supports user roles, role gates, and protected API routes and server actions. Try Auth by KMaar today and experience the best authentication solution for your web app.enerated by create next app",
   verification: {
     google: "w3roI87t-dIyKe7ReAdSWUVpWCe7K1pP_EXUidsZ3xI",
     me: "KMaar",
   },
   keywords: [
+    "auth by KMaar",
     "authy",
     "Abhishek KMaar",
     "Abhishek Kumar",

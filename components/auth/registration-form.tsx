@@ -30,6 +30,7 @@ export const RegisterForm = () => {
       name: "",
       email: "",
       password: "",
+      confirm: "",
     },
   });
 
@@ -47,7 +48,8 @@ export const RegisterForm = () => {
   return (
     <CardWrapper
       headerLabel="Create an account"
-      backButtonLabel="Already have an account?"
+      backButtonDescription="Already have an account?"
+      backButtonLabel="Log In"
       backButtonHref="/auth/login"
       showSocial
     >
@@ -95,6 +97,24 @@ export const RegisterForm = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Password</FormLabel>
+                  <FormControl>
+                    <Input
+                      {...field}
+                      disabled={isPending}
+                      placeholder="********"
+                      type="password"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="confirm"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Confirm Password</FormLabel>
                   <FormControl>
                     <Input
                       {...field}

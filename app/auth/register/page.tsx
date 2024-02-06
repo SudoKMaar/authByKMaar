@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { RegisterForm } from "@/components/auth/registration-form";
 
 export const metadata: Metadata = {
-  title: "Register",
+  title: "Registration",
 };
 
 const RegisterPage = () => {

@@ -9,14 +9,42 @@ export const LoginSchema = z.object({
   }),
 });
 
-export const RegisterSchema = z.object({
-  name: z.string().min(1, {
-    message: "Name is required",
-  }),
+export const RegisterSchema = z
+  .object({
+    email: z.string().email({
+      message: "Valid email is required.",
+    }),
+    password: z.string().min(8, {
+      message: "Minimum 8 characters required.",
+    }),
+    confirm: z.string().min(8, {
+      message: "Minimum 8 characters required.",
+    }),
+    name: z.string().min(1, {
+      message: "Name is required.",
+    }),
+  })
+  .refine((data) => data.password === data.confirm, {
+    message: "Passwords does not match.",
+    path: ["confirm"],
+  });
+
+export const ResetSchema = z.object({
   email: z.string().email({
     message: "Email is required",
   }),
-  password: z.string().min(8, {
-    message: "Minimum 8 characters required",
-  }),
 });
+
+export const NewPasswordSchema = z
+  .object({
+    password: z.string().min(8, {
+      message: "Minimum of 8 characters required.",
+    }),
+    confirm: z.string().min(8, {
+      message: "Minimum 8 characters required.",
+    }),
+  })
+  .refine((data) => data.password === data.confirm, {
+    message: "Passwords does not match.",
+    path: ["confirm"],
+  });
