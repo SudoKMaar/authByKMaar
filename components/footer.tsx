@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
-    <div className="absolute bottom-0 ">
-      <footer className="flex justify-center items-center text-center w-screen bg-white bg-opacity-10 text-wrap m-auto">
+    <div className="relative bottom-0">
+      <footer className="flex justify-center items-center text-center w-full bg-white bg-opacity-10 text-wrap mx-auto">
         <small className="text-white">
           &copy; {new Date().getFullYear()}
           <Button variant="link" className="text-white text-xs px-1" asChild>

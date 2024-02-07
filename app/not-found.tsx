@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Custom404 = () => {
   return (
-    <div className="flex flex-col relative items-center justify-center min-h-screen md:flex-row mx-auto bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
+    <div className="flex flex-col relative items-center justify-center min-h-[calc(100vh_-_36px)] md:flex-row mx-auto">
       {/* image */}
       <div className="flex items-center flex-1 mt-10 md:mt-0">
         <Image
@@ -22,7 +22,7 @@ const Custom404 = () => {
           unavailable
         </p>
         <Link
-          className="inline-block py-4 mt-6 text-lg tracking-wider text-white gradient-bg rounded px-7"
+          className="inline-block py-4 mt-6 text-lg tracking-wider text-white rounded px-7"
           href="/"
         >
           BACK TO HOMEPAGE

@@ -3,6 +3,9 @@ import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import { Footer } from "@/components/footer";
+import { Toaster } from "@/components/ui/sonner";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -64,7 +67,16 @@ export default async function RootLayout({
   return (
     <SessionProvider session={session}>
       <html lang="en">
-        <body className={poppins.className}>{children}</body>
+        <body
+          className={cn(
+            "bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-sky-400 to-blue-800",
+            poppins.className
+          )}
+        >
+          <Toaster />
+          {children}
+          <Footer />
+        </body>
       </html>
     </SessionProvider>
   );

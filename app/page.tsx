@@ -3,11 +3,10 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { LoginButton } from "@/components/auth/login-button";
 import { Button } from "@/components/ui/button";
-import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-sky-400 to-blue-800 text-white">
+    <main className="flex min-h-[calc(100vh_-_36px)] flex-col items-center justify-center text-white">
       <section className="space-y-6">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <Link href="/" className="flex items-center">
@@ -45,7 +44,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
     </main>
   );
 }
