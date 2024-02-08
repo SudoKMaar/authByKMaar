@@ -13,6 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://authbykmaar.vercel.app"),
   title: {
     default: "Auth by KMaar",
     template: "%s - Auth by KMaar",
@@ -22,6 +23,9 @@ export const metadata: Metadata = {
   verification: {
     google: "w3roI87t-dIyKe7ReAdSWUVpWCe7K1pP_EXUidsZ3xI",
     me: "KMaar",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
   keywords: [
     "auth by KMaar",

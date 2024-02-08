@@ -37,6 +37,7 @@ export const settings = async (values: z.infer<typeof UpdateProfileSchema>) => {
       verificationToken.email,
       verificationToken.token
     );
+    return { success: "Verification email sent!" };
   }
 
   const updatedUser = await db.user.update({

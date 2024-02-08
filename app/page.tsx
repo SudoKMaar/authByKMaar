@@ -27,7 +27,7 @@ export default function Home() {
             and Auth.js using the latest server actions.
           </p>
           <div className="space-x-4 mt-5">
-            <LoginButton mode="redirect" asChild>
+            <LoginButton mode="modal" asChild>
               <Button variant="default" size="lg">
                 Sign in <ArrowRightIcon className="ml-2" />
               </Button>
