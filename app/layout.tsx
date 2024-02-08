@@ -69,7 +69,7 @@ export default async function RootLayout({
       <html lang="en">
         <body
           className={cn(
-            "bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-sky-400 to-blue-800",
+            "bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-sky-400 to-blue-800 custom-scrollbar",
             poppins.className
           )}
         >

@@ -62,6 +62,7 @@ export const generateVerificationToken = async (email: string) => {
   }
 
   const verficationToken = await db.verificationToken.create({
+    //@ts-ignore
     data: {
       email,
       token,
